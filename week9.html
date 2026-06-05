@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 09 | Ann Ge WR40 Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav>
+    <a class="logo" href="index.html" aria-label="Ann Ge home"><img src="assets/ann-ge-logo.png" alt="Ann Ge" /></a>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Journey</a></li>
+      <li><a class="active" href="archive.html">Evidence</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
+      <li><a href="contact.html">Final Drafts</a></li>
+    </ul>
+  </nav>
+
+  <main class="page week-page">
+    <a class="back-link" href="archive.html">Back to Evidence</a>
+
+    <p class="small">Week 09</p>
+    <h1>Choose Your Own Revision Adventure</h1>
+
+    <div class="week-layout">
+      <aside class="week-sidebar" aria-label="Week 09 sections">
+        <button class="sidebar-tab" type="button" data-target="memorial-day">
+          <span>May 25</span>
+          Memorial Day, No Class
+        </button>
+
+        <button class="sidebar-tab active" type="button" data-target="revision-adventure">
+          <span>May 27</span>
+          Choose Your Own Revision Adventure
+        </button>
+      </aside>
+
+      <section class="week-content">
+        <article class="week-panel" id="memorial-day">
+          <p class="small">May 25</p>
+          <h2>Memorial Day, No Class</h2>
+
+          <section class="deadline-banner" aria-label="No class notice">
+            <p>Memorial Day, No Class</p>
+          </section>
+        </article>
+
+        <article class="week-panel active" id="revision-adventure">
+          <p class="small">May 27</p>
+          <h2>Choose Your Own Revision Adventure</h2>
+
+          <div class="artifact-layout">
+            <div class="artifact-pdf">
+              <div class="pdf-header">
+                <span>WR40 · Mini Peer Review Adventure</span>
+                <span>Ann Ge · Week 09</span>
+              </div>
+
+              <h3>Mini Peer Review Adventure</h3>
+
+              <p>
+                Adapted from Jennifer Geraci. Below are some helpful and optional
+                peer review prompts. Choose whichever works for you, and mix and
+                match questions if you want to.
+              </p>
+
+              <div class="assignment-list">
+                <div class="assignment-row">
+                  <span class="assignment-icon">1</span>
+                  <div>
+                    <h3>Main Argument Check</h3>
+                    <p>
+                      Have your peer read through your entire essay and type out
+                      what they think your main argument is: make a point, change
+                      perspective, attack, or defend.
+                    </p>
+                    <p>
+                      Is it a personal argument, like the best food for you; a
+                      universal argument, like the best food for everyone; a
+                      culturally specific argument, like the best food for a
+                      particular culture; or something else?
+                    </p>
+                    <p>
+                      You do the same for your peer's paper. After you are both
+                      finished, share what you think the main message is with
+                      your peer. Work together to revise your drafts so the main
+                      message is clearer for readers.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="assignment-row">
+                  <span class="assignment-icon">2</span>
+                  <div>
+                    <h3>Introduction Help</h3>
+                    <p>
+                      If you need help with your introduction, share introduction
+                      sections with each other. Both partners write margin
+                      comments about their reactions and write out questions
+                      where parts are unclear.
+                    </p>
+                    <p>
+                      Then, have a conversation about the comments and help each
+                      other make revisions.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="assignment-row">
+                  <span class="assignment-icon">3</span>
+                  <div>
+                    <h3>New Stuff</h3>
+                    <p>
+                      Share a new or recently written part of your draft with
+                      your peer, and have your peer share theirs with you. Talk
+                      about what you added, why you added that part, and what
+                      effect you hope the new stuff will have on readers.
+                    </p>
+                    <p>
+                      Help each other clarify, add to, or change the new stuff
+                      as needed.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="assignment-row">
+                  <span class="assignment-icon">4</span>
+                  <div>
+                    <h3>Do Your Own Peer Review</h3>
+                    <p>
+                      You and your peer can create your own peer review based on
+                      your draft's revision needs. Be rebels.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="assignment-row">
+                  <span class="assignment-icon">5</span>
+                  <div>
+                    <h3>Work Alone</h3>
+                    <p>FINE. Work alone. I see how you are.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="process-note">
+              <p class="small">Revision Focus</p>
+              <p>
+                This activity turns peer review into a choice-based workshop:
+                writers can focus on the main argument, the introduction, a new
+                section, or whatever revision question their draft most needs.
+              </p>
+            </aside>
+          </div>
+        </article>
+      </section>
+    </div>
+
+    <nav class="week-nav" aria-label="Week navigation">
+      <a class="week-nav-link" href="week8.html">&lsaquo; Previous Week</a>
+      <a class="week-nav-link" href="week10.html">Next Week &rsaquo;</a>
+    </nav>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll(".sidebar-tab");
+    const panels = document.querySelectorAll(".week-panel");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.dataset.target;
+
+        tabs.forEach((item) => item.classList.remove("active"));
+        panels.forEach((panel) => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
